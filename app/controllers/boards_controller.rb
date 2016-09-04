@@ -1,6 +1,7 @@
 class BoardsController < ApplicationController
   def index
     @boards = Board.all
+    @board = Board.new
   end
 
   def new
@@ -9,6 +10,7 @@ class BoardsController < ApplicationController
 
   def create
     @board = Board.create(board_params)
+    redirect_to root_path
   end
 
   def show

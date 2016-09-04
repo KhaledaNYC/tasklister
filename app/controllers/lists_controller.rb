@@ -9,6 +9,7 @@ class ListsController < ApplicationController
 
   def create
     @list = List.create(list_params)
+    
   end
 
   def show
